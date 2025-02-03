@@ -1,4 +1,3 @@
-// src/controllers/studentController.js
 const pool = require("../config/database");
 
 const studentController = {
@@ -188,6 +187,8 @@ createStudent: async (req, res) => {
       });
     }
   },
+
+ 
 
   // Get student marks
   getStudentMarks: async (req, res) => {

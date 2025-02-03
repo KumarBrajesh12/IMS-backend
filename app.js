@@ -12,11 +12,12 @@ const app = express();
 // Security Middleware
 app.use(helmet());
 app.use(apiLimiter);
-app.use(cors({
-    origin: process.env.CORS_ORIGIN || '*',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-}));
+// app.use(cors({
+//     origin: process.env.CORS_ORIGIN || '*',
+//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//     allowedHeaders: ['Content-Type', 'Authorization']
+// }));
+app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

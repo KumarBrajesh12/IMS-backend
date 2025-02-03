@@ -13,6 +13,7 @@ router.put('/students/:id', [authMiddleware, validateStudent], studentController
 router.delete('/students/:id', authMiddleware, studentController.deleteStudent);
 
 // Mark routes
+router.get('/subjects', authMiddleware, markController.getSubjects);
 router.get('/students/:id/marks', authMiddleware, markController.getStudentMarks);
 router.post('/students/:id/marks', [authMiddleware, validateMarks], markController.addStudentMarks);
 router.put('/students/:id/marks/:markId', [authMiddleware, validateMarks], markController.updateStudentMark);

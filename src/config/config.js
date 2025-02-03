@@ -39,7 +39,7 @@ const config = {
         maxLimit: 100
     },
 
-    // JWT Configuration (if you plan to add authentication)
+    // JWT Configuration (if you plan to add authentication) may be I will add this in future
     jwt: {
         secret: process.env.JWT_SECRET,
         expiresIn: process.env.JWT_EXPIRES_IN
